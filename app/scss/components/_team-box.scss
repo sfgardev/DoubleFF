@@ -1,0 +1,31 @@
+.team-box {
+  flex: 1 1 33.333333%;
+  text-align: center;
+  color: #000;
+  font-family: 'Revalia', cursive;
+
+  &__photo {
+    margin-bottom: 17px;
+  }
+
+  &__img {
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 17px;
+  }
+
+  &__position {
+    margin-bottom: 17px;
+  }
+
+  &__link {
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.btn {
+  font-size: 18px;
+  line-height: 25px;
+  padding: 9px 20px;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+  transition: all .2s;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  &--project {
+    padding: 9px 55px;
+    margin-top: 54px;
+    transition: all .3s;
+
+    &:hover {
+      box-shadow: 0 10px 20px rgba(#000, .5);
+    }
+  }
+
+  &--contact {
+    border: none;
+    cursor: pointer;
+    margin-top: 24px;
+    transition: all .4s;
+
+    &:hover {
+      box-shadow: 0 10px 20px rgba(#000, .5);
+    }
+  }
+}
+
+.text-btn {
+  font-family: 'Revalia', cursive;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+  
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}

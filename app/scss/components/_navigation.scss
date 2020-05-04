@@ -1,0 +1,40 @@
+.menu {
+  padding-top: 30px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+
+  &__link {
+    font-family: 'Revalia', cursive;
+    font-size: 24px;
+    color: $color-text;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #000;
+      bottom: -10px;
+      left: 0;
+      z-index: 1;
+      transition: width .2s;
+    }
+    &:hover {
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

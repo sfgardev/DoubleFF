@@ -1,0 +1,65 @@
+.about-us {
+
+  &__inner {
+    padding: 161px 0 168px;
+  }
+}
+
+.our-projects {
+  background-color: #000;
+
+  &__inner {
+    padding: 131px 0 110px;
+  }
+}
+
+.benefits {
+  background-color: $color-grey;
+
+  &__inner {
+    padding: 81px 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.team {
+
+  &__inner {
+    padding: 174px 0;
+    display: flex;
+  }
+}
+
+.projects {
+  padding-bottom: 153px;
+
+  &__buttons {
+    margin-bottom: 57px; 
+  }
+}
+
+.quote {
+  background-color: #000;
+
+  &__inner {
+    padding: 37px 0 167px;
+    color: #fff;
+  }
+}
+
+.contact-us {
+
+  padding-bottom: 200px;
+
+  &__inner {
+    padding-top: 114px;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__form {
+    width: 100%;
+  }
+}

@@ -1,0 +1,50 @@
+.form {
+
+  &__inner {
+    display: flex;
+  }
+
+  &__group {
+    width: 100%;
+    margin-bottom: 170px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid $color-grey-dark;
+    padding: 5px 10px 14px;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 10px 10px rgba(0,0,0, .1);
+      border-bottom: none;
+    }
+  }
+
+  &__input {
+    font-family: 'CenturyGothic', sans-serif;
+
+    &::placeholder {
+      color: $color-grey-dark;
+      font-family: 'CenturyGothic', sans-serif;
+    }
+  }
+
+  &__textarea {
+    font-family: 'CenturyGothic', sans-serif;
+    resize: none;
+    height: 220px;
+
+    &::placeholder {
+      color: $color-grey-dark;
+      font-family: 'CenturyGothic', sans-serif;
+    }
+  }
+}

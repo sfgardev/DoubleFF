@@ -1,0 +1,77 @@
+body {
+  font-family: 'CenturyGothic', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: $color-text;
+}
+
+.heading-primary {
+  font-family: 'CenturyGothic', sans-serif;
+  font-size: 48px;
+  line-height: 65px;
+  color: #000;
+  display: inline-block;
+  
+  // span {
+  //   font-family: 'Revalia', cursive;
+  // }
+}
+
+.typed-cursor {
+  font-size: 48px;
+}
+
+.heading-secondary {
+  font-family: 'CenturyGothic', sans-serif;
+  font-size: 32px;
+  line-height: 44px;
+  margin-bottom: 20px;
+
+  &--white {
+    color: #fff;
+    margin-bottom: 30px;
+  }
+
+  &--text-align-right {
+    text-align: right;
+  }
+
+  &--underline {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 116px;
+      height: 1px;
+      background-color: #000;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &--color-white {
+    margin-bottom: 57px;
+
+    &::after {
+      background-color: #fff;
+    }
+  }
+}
+
+.paragraph {
+  font-family: 'CenturyGothic', sans-serif;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &--color-white {
+    margin-bottom: 20px;
+  }
+}

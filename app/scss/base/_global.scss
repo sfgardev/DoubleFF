@@ -1,0 +1,32 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+ul,
+li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'CenturyGothic';
+}
+
+.container {
+    max-width: 1000px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
