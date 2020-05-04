@@ -17,6 +17,4 @@ $(function(){
     fade: true,
     autoplay: 3000,
   });
-
-
 });
