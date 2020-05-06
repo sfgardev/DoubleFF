@@ -1,0 +1,11 @@
+.logo {
+  position: relative;
+  z-index: 5;
+  
+  .logo__icon {
+
+    @media (max-width: 800px) {
+      height: 70px;
+    }
+  }
+}

@@ -1,23 +1,57 @@
 .menu {
-  padding-top: 30px;
+  padding-top: 70px;
+
+  @media (max-width: 800px) {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #fff;
+    z-index: 1;
+    transition: all .5s;
+  }
+
+  &.active {
+    
+    @media (max-width: 800px) {
+      top: 0;
+    }
+  }
 
   &__list {
     display: flex;
     justify-content: center;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      height: 100%;
+    }
   }
 
   &__item {
 
     &:not(:last-child) {
-      margin-right: 60px;
+      margin-right: 70px;
+
+      @media (max-width: 800px) {
+        margin-right: 0;
+      }
     }
   }
 
   &__link {
     font-family: 'Revalia', cursive;
     font-size: 24px;
+    line-height: 28px;
     color: $color-text;
     position: relative;
+
+    @media (max-width: 800px) {
+      margin-bottom: 70px;
+      width: 100%;
+    }
 
     &::after {
       content: "";
@@ -37,4 +71,8 @@
       }
     }
   }
+}
+
+.hidden {
+  top: -1000px;
 }
