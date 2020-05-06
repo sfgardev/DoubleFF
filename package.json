@@ -23,6 +23,7 @@
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {
+    "jquery-parallax.js": "^1.5.0",
     "typed.js": "^2.0.11"
   }
 }

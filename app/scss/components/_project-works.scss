@@ -5,12 +5,28 @@
 
   &__item {
     flex: 1 1 33.333333%;
+    overflow: hidden;
     
+
+    &:hover  {
+      .project-works__img {
+        transform: scale(1.05);
+        filter: opacity(1);
+      }
+    }
   }
+
 
   &__img {
     display: block;
     max-width: 100%;
     min-height: 100%;
+    min-width: 100%;
+    transition: all .3s linear;
+    filter: opacity(.7);
+  }
+
+  &__overlay {
+    position: absolute;
   }
 }

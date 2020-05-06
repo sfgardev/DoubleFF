@@ -1,0 +1,18 @@
+.services-box {
+  text-align: center;
+  // flex: 1 1 33.333333%;
+  width: 33.33333%;
+  margin-bottom: 53px;
+
+  &__img {
+    margin-bottom: 11px;
+  }
+
+  &__title {
+    font-family: 'CenturyGothic', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #000;
+  }
+}
