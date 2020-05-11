@@ -4,7 +4,7 @@ let gulp = require('gulp'),
     browserSync = require('browser-sync'),
     autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
+    uglify = require('gulp-uglify-es').default,
     cssmin = require('gulp-cssmin'),
     del = require('del');
 

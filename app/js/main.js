@@ -107,4 +107,59 @@ $(function () {
     }, 500);
   });
 
+  let mouseCursor = document.querySelector(".cursor");
+  let navLinks = document.querySelectorAll(".menu__item a");
+  let projectSection = document.querySelector(".our-projects");
+  let quotesSection = document.querySelector(".quote");
+  let buttons = document.querySelectorAll(".btn");
+  let contactBoxes = document.querySelectorAll(".contact-box");
+
+  window.addEventListener("mousemove", cursor);
+
+  function cursor(e) {
+    mouseCursor.style.top = e.pageY + "px";
+    mouseCursor.style.left = e.pageX + "px";
+  }
+
+  navLinks.forEach((link) => {
+    link.addEventListener("mouseover", () => {
+      mouseCursor.classList.add("link-grow");
+      link.classList.add("hovered-link");
+    });
+    link.addEventListener("mouseleave", () => {
+      mouseCursor.classList.remove("link-grow");
+      link.classList.remove("hovered-link");
+    });
+  });
+
+  contactBoxes.forEach((link) => {
+    link.addEventListener("mouseover", () => {
+      mouseCursor.classList.add("link-grow");
+      link.classList.add("hovered-link");
+    });
+    link.addEventListener("mouseleave", () => {
+      mouseCursor.classList.remove("link-grow");
+      link.classList.remove("hovered-link");
+    });
+  });
+
+  [quotesSection, projectSection].forEach((section) => {
+    section.addEventListener("mouseover", () => {
+      mouseCursor.classList.add("--white");
+    });
+    section.addEventListener("mouseleave", () => {
+      mouseCursor.classList.remove("--white");
+    });
+  });
+
+  buttons.forEach((button) => {
+    button.addEventListener("mouseover", () => {
+      mouseCursor.classList.add("link-grow");
+      mouseCursor.classList.add("--white");
+    });
+    button.addEventListener("mouseleave", () => {
+      mouseCursor.classList.remove("link-grow");
+      mouseCursor.classList.remove("--white");
+    });
+  });
 });
