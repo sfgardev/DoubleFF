@@ -5,15 +5,23 @@
   background-size: cover;
   position: relative;
 
+  @media (max-height: 800px) {
+    height: 700px;
+  }
+
   &__inner {
     text-align: center;
     padding-top: 25px;
 
-    @media (max-width: 800px) {
+    @media (max-width: 767px) {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding-top: 10px;
+    }
+
+    @media (max-height: 800px) {
+      padding-top: 0;
     }
   }
   @media (max-width: 609px) {
@@ -33,5 +41,9 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: max-content;
+
+    @media (max-height: 800px) {
+      top: 40%;
+    }
   }
 }
