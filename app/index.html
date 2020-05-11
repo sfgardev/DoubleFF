@@ -22,7 +22,12 @@
 
   <body>
 
+    <div class="popup" id="popup">
+      <h2 class="popup__title">Спасибо</h2>
+    </div>
+
     <a href="#" class="to-top-btn" id="top-btn"></a>
+
     <header
       class="header"
       data-parallax="scroll"
@@ -988,7 +993,7 @@
               placeholder="Текст письма*"
             ></textarea>
             <div class="u-text-align-right">
-              <button type="submit" class="btn btn--contact">Отправить</button>
+              <button type="submit" class="btn btn--contact" data-fancybox data-src="#popup" href="javascript:;">Отправить</button>
             </div>
           </form>
         </div>
