@@ -13,7 +13,7 @@
     transition: all .5s;
   }
 
-  @media (max-height: 800px) {
+  @media (max-height: 500px) {
     padding-top: 30px;
   }
 
@@ -49,8 +49,8 @@
     font-family: 'Revalia', cursive;
     font-size: 24px;
     line-height: 28px;
-    color: $color-text;
     position: relative;
+    z-index: 1;
 
     @media (max-width: 767px) {
       margin-bottom: 70px;
@@ -62,7 +62,7 @@
       position: absolute;
       width: 0;
       height: 2px;
-      background-color: #000;
+      background-color: #fff;
       bottom: -10px;
       left: 0;
       z-index: 1;

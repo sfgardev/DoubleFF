@@ -1,39 +1,41 @@
-html{
-    box-sizing: border-box;
+html {
+  box-sizing: border-box;
 }
 *,
 *::before,
-*::after{
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
-// body {
+body,
+a,
+input,
+button,
+textarea {
+  cursor: none;
+}
 
-//     &.lock {
-//         overflow: hidden;
-//     }
-// }
-
-a{
-    display: inline-block;
-    text-decoration: none;
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
 }
 
 ul,
-li{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 body {
-    font-family: 'CenturyGothic';
+  font-family: "CenturyGothic";
 }
 
 .container {
-    max-width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 }

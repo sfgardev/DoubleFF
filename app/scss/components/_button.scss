@@ -25,7 +25,7 @@
 
   &--contact {
     border: none;
-    cursor: pointer;
+    // cursor: pointer;
     margin-top: 24px;
     transition: all .4s;
 
@@ -41,7 +41,7 @@
   background-color: transparent;
   font-size: 16px;
   line-height: 22px;
-  cursor: pointer;
+  // cursor: pointer;
   
   &:not(:last-child) {
     margin-right: 40px;

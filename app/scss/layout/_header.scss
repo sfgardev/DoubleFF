@@ -5,7 +5,7 @@
   background-size: cover;
   position: relative;
 
-  @media (max-height: 800px) {
+  @media (max-height: 500px) {
     height: 700px;
   }
 
@@ -20,7 +20,7 @@
       padding-top: 10px;
     }
 
-    @media (max-height: 800px) {
+    @media (max-height: 500px) {
       padding-top: 0;
     }
   }
@@ -42,7 +42,11 @@
     transform: translate(-50%, -50%);
     width: max-content;
 
-    @media (max-height: 800px) {
+    @media (max-height: 615px) {
+      top: 60%;
+    }
+
+    @media (max-height: 500px) {
       top: 40%;
     }
   }

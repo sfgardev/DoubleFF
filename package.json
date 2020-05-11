@@ -9,6 +9,7 @@
   "author": "Fedor",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -18,12 +19,12 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^2.0.0",
     "jquery-parallax.js": "^1.5.0",
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {
-    "@fancyapps/fancybox": "^3.5.7",
     "animate.css": "^4.0.0",
     "jquery-parallax.js": "^1.5.0",
     "typed.js": "^2.0.11",
