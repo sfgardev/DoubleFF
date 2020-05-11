@@ -956,22 +956,14 @@
               Оставить заявку
             </h2>
           </div>
-          <form action="#" class="form">
+          <form id="form" class="form">
             <div class="form__inner">
               <div class="form__group">
                 <input
                   type="text"
                   class="form__input"
-                  id="name"
-                  placeholder="Имя*"
-                  required
-                />
-                <input
-                  type="hidden"
-                  class="form__input"
-                  id="name"
-                  name="client_name"
-                  value="Имя"
+                  id="form-first_name"
+                  name="first_name"
                   placeholder="Имя*"
                   required
                 />
@@ -979,18 +971,10 @@
               </div>
               <div class="form__group">
                 <input
-                  type="text"
+                  type="email"
                   class="form__input"
-                  id="mail"
-                  placeholder="Email*"
-                  required
-                />
-                <input
-                  type="hidden"
-                  class="form__input"
-                  id="mail"
-                  name="admin_email"
-                  value="info@doubleff.ru"
+                  id="form-email"
+                  name="email"
                   placeholder="Email*"
                   required
                 />
@@ -999,16 +983,12 @@
             </div>
             <textarea
               class="form__textarea"
-              placeholder="Текст письма*"
-            ></textarea>
-            <textarea
-              style="display: none;"
-              class="form__textarea"
+              id="form-text"
               name="text"
               placeholder="Текст письма*"
             ></textarea>
             <div class="u-text-align-right">
-              <button class="btn btn--contact">Отправить</button>
+              <button type="submit" class="btn btn--contact">Отправить</button>
             </div>
           </form>
         </div>

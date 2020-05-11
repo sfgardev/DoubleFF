@@ -3,7 +3,7 @@
   width: 33.33333%;
   text-align: center;
   color: #000;
-  font-family: 'Revalia', cursive;
+  font-family: "Revalia", cursive;
 
   @media (max-width: 996px) {
     width: 50%;
@@ -20,6 +20,12 @@
 
   &__img {
     border-radius: 50%;
+    transition: filter 0.2s linear;
+    filter: grayscale(.5);
+
+    &:hover {
+      filter: grayscale(0);
+    }
   }
 
   &__name {
@@ -33,7 +39,6 @@
   }
 
   &__link {
-
     &:not(:last-child) {
       margin-right: 10px;
     }
