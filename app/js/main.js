@@ -35,10 +35,30 @@ $(function(){
 
   $("#burger").on("click", function() {
     $("#burger, #menu").toggleClass("active");
+    // $("body").toggleClass("lock");
   });
 
-  $(".menu.active .menu__link").on("click", function() {
-    $("#menu").removeClass("active");
+  $(".menu__link").on("click", function() {
+    $("#burger, #menu").removeClass("active");
+  });
+
+  new WOW().init();
+
+   //E-mail Ajax Send
+   $("form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize()
+    }).done(function() {
+      alert("Thank you!");
+      setTimeout(function() {
+        // Done Functions
+        th.trigger("reset");
+      }, 1000);
+    });
+    return false;
   });
 
 });

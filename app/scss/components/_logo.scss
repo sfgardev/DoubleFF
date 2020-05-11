@@ -1,6 +1,7 @@
 .logo {
   position: relative;
   z-index: 5;
+  animation: moveInTop .7s ease-out;
   
   .logo__icon {
 

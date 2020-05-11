@@ -4,9 +4,13 @@
   
 
   &__item {
-    flex: 1 1 33.333333%;
+    // flex: 1 1 33.333333%;
+    width: 33.33333%;
     overflow: hidden;
     
+    @media (max-width: 767px) {
+      width: 50%;
+    }
 
     &:hover  {
       .project-works__img {

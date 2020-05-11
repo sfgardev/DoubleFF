@@ -16,11 +16,22 @@
       padding-top: 10px;
     }
   }
+  @media (max-width: 609px) {
+    .heading-primary {
+      font-size: 28px;
+    }
+  }
+  @media (max-width: 360px) {
+    .heading-primary {
+      font-size: 20px;
+    }
+  }
 
   &__text-box {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: max-content;
   }
 }

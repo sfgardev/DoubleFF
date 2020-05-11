@@ -1,5 +1,5 @@
 body {
-  font-family: 'CenturyGothic', sans-serif;
+  font-family: "CenturyGothic", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
@@ -7,12 +7,12 @@ body {
 }
 
 .heading-primary {
-  font-family: 'CenturyGothic', sans-serif;
+  font-family: "CenturyGothic", sans-serif;
   font-size: 48px;
   line-height: 65px;
   color: #000;
   display: inline-block;
-  
+
   // span {
   //   font-family: 'Revalia', cursive;
   // }
@@ -21,9 +21,14 @@ body {
 .typed-cursor {
   font-size: 48px;
 }
+@media (max-width: 609px) {
+  .typed-cursor {
+    font-size: 24px;
+  }
+}
 
 .heading-secondary {
-  font-family: 'CenturyGothic', sans-serif;
+  font-family: "CenturyGothic", sans-serif;
   font-size: 32px;
   line-height: 44px;
   margin-bottom: 20px;
@@ -65,7 +70,7 @@ body {
 }
 
 .paragraph {
-  font-family: 'CenturyGothic', sans-serif;
+  font-family: "CenturyGothic", sans-serif;
 
   &:not(:last-child) {
     margin-bottom: 20px;

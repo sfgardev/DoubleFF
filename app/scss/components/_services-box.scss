@@ -4,6 +4,14 @@
   width: 33.33333%;
   margin-bottom: 53px;
 
+  @media (max-width: 996px) {
+    width: 50%;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+
   &__img {
     margin-bottom: 11px;
   }
