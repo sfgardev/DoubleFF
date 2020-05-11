@@ -1,7 +1,7 @@
 .menu {
   padding-top: 70px;
 
-  @media (max-width: 800px) {
+  @media (max-width: 767px) {
     position: fixed;
     top: -100%;
     left: 0;
@@ -13,9 +13,13 @@
     transition: all .5s;
   }
 
+  @media (max-height: 800px) {
+    padding-top: 30px;
+  }
+
   &.active {
     
-    @media (max-width: 800px) {
+    @media (max-width: 767px) {
       top: 0;
     }
   }
@@ -24,7 +28,7 @@
     display: flex;
     justify-content: center;
 
-    @media (max-width: 800px) {
+    @media (max-width: 767px) {
       flex-direction: column;
       height: 100%;
     }
@@ -35,7 +39,7 @@
     &:not(:last-child) {
       margin-right: 70px;
 
-      @media (max-width: 800px) {
+      @media (max-width: 767px) {
         margin-right: 0;
       }
     }
@@ -48,7 +52,7 @@
     color: $color-text;
     position: relative;
 
-    @media (max-width: 800px) {
+    @media (max-width: 767px) {
       margin-bottom: 70px;
       width: 100%;
     }

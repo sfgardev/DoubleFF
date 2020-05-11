@@ -8,8 +8,6 @@ $(function(){
     showCursor: true,
     loop: true,
     backSpeed: 60
-
-    
   });
 
   /* Slider */
