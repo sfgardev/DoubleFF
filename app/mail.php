@@ -1,25 +1,52 @@
-<?php 
-    $fName = 'Имя: '.$_POST['first_name'].' <br />';
-    $fMail =  'Почта: '.$_POST['email'].' <br />';
-    $fMessage =  'Сообщение: '.$_POST['text'].' <br />';
-    $AllInOne =  $fName.$fMail.$fMessage;
-    $to = 'info@doubleff.ru'; 
-    $headers="From: Doubleff <info@doubleff.ru>\nReply-to:info@doubleff.ru\nContent-Type: text/html; charset=\"utf-8\"\n"; 
-    // функция, которая отправляет наше письмо
-    mail($to, 'Свяжитесь с нами', $AllInOne, $headers); 
+<?php
 
+$method = $_SERVER['REQUEST_METHOD'];
 
-    if(!empty($name) && !empty($surname) && !empty($email) && !empty($message)) {
-        $email_validate = filter_var($email, FILTER_VALIDATE_EMAIL); 
-    
-        if(check_length($name, 2, 25) && check_length($surname, 2, 50) && check_length($message, 2, 1000) && $email_validate) {
-            mail($to, 'Свяжитесь с нами', $AllInOne, $headers); 
-            echo "Спасибо за заявку, мы скоро с Вами свяжемся!";
-        }
-        else{
-            echo "Введенные данные некорректны";
-        }
-    }
-    else { // добавили сообщение
-        echo "Заполните пустые поля";
-?>
+//Script Foreach
+$c = true;
+if ( $method === 'POST' ) {
+
+	$project_name = trim($_POST["project_name"]);
+	$admin_email  = trim($_POST["admin_email"]);
+	$form_subject = trim($_POST["form_subject"]);
+
+	foreach ( $_POST as $key => $value ) {
+		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+			$message .= "
+			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
+			</tr>
+			";
+		}
+	}
+} else if ( $method === 'GET' ) {
+
+	$project_name = trim($_GET["project_name"]);
+	$admin_email  = trim($_GET["admin_email"]);
+	$form_subject = trim($_GET["form_subject"]);
+
+	foreach ( $_GET as $key => $value ) {
+		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+			$message .= "
+			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
+			</tr>
+			";
+		}
+	}
+}
+
+$message = "<table style='width: 100%;'>$message</table>";
+
+function adopt($text) {
+	return '=?UTF-8?B?'.Base64_encode($text).'?=';
+}
+
+$headers = "MIME-Version: 1.0" . PHP_EOL .
+"Content-Type: text/html; charset=utf-8" . PHP_EOL .
+'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
+'Reply-To: '.$admin_email.'' . PHP_EOL;
+
+mail($admin_email, adopt($form_subject), $message, $headers );

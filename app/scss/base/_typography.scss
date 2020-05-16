@@ -4,6 +4,10 @@ body {
   font-size: 14px;
   line-height: 19px;
   color: $color-text;
+
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .heading-primary {
@@ -38,7 +42,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  .cursor{
+  .cursor {
     display: none;
   }
 }
@@ -49,7 +53,16 @@ body {
 
 .link-grow {
   transform: scale(2);
+}
+
+.link-grow--black {
+  transform: scale(2);
   background: #000;
+}
+
+.link-grow.--transparent {
+  border-color: #000;
+  background: transparent;
 }
 
 .hovered-link {
