@@ -79,37 +79,3 @@
         visibility: visible;
     }
 }
-
-.swal2-modal .swal2-actions .swal2-styled.swal2-confirm {
-    background-color: #000;
-    border-left-color: none !important;
-    border-right-color: none !important;
-}
-.swal2-show .swal2-icon.swal2-success {
-    border-color: #000;
-    color: #000;
-}
-.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip {
-    background-color: #000;
-}
-.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long {
-    background-color: #000;
-}
-.swal2-success-fix {
-    background-color: #000;
-}
-.swal2-icon.swal2-success.swal2-icon-show .swal2-success-ring {
-    border: 0.25em solid #000;
-}
-
-.swal2-icon-show .swal2-success-fix {
-    background-color: #000;
-}
-
-.swal2-success-circular-line-left {
-    background-color: #000;
-}
-
-#swal2-title {
-    color: #000;
-}

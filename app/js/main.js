@@ -39,6 +39,7 @@ $(function () {
         );
     });
 
+    /* Burger-menu */
     $("#burger").on("click", function () {
         $("#burger, #menu").toggleClass("active");
         $("body").toggleClass("lock");
@@ -63,8 +64,9 @@ $(function () {
                 data: th.serialize(),
             }).done(function () {
                 new Swal({
-                    title: "Спасибо",
+                    titleText: "Спасибо",
                     icon: "success",
+                    text: "Мы скоро с Вами свяжемся",
                 });
                 setTimeout(function () {
                     // Done Functions
@@ -75,24 +77,18 @@ $(function () {
         });
     });
 
-    // /* SweetAlert */
-    // new Swal({
-    //     title: "Спасибо",
-    //     icon: "success",
-    // });
-    
-
-    var btn = $("#top-btn");
+    /* Scroll top */
+    var topBtn = $("#top-btn");
 
     $(window).scroll(function () {
         if ($(window).scrollTop() > 300) {
-            btn.addClass("show");
+            topBtn.addClass("show");
         } else {
-            btn.removeClass("show");
+            topBtn.removeClass("show");
         }
     });
 
-    btn.on("click", function (event) {
+    topBtn.on("click", function (event) {
         event.preventDefault();
         $("html, body").animate(
             {
@@ -102,75 +98,71 @@ $(function () {
         );
     });
 
-    let mouseCursor = document.querySelector(".cursor");
-    let navLinks = document.querySelectorAll(".menu__item a");
-    let projectSection = document.querySelector(".our-projects");
-    let quotesSection = document.querySelector(".quote");
-    let buttons = document.querySelectorAll(".btn");
-    let btnsEffect = document.querySelectorAll(".btn");
-    let contactBoxes = document.querySelectorAll(".contact-box");
+    /* Cursor */
+
+    let elements = {
+        mouseCursor: document.querySelector(".cursor"),
+        navLinks: document.querySelectorAll(".menu__item a"),
+        sections: document.querySelectorAll(".our-projects, .quote"),
+        buttons: document.querySelectorAll(".btn"),
+        contactBoxes: document.querySelectorAll(".contact-box"),
+    };
 
     window.addEventListener("mousemove", cursor);
 
     function cursor(e) {
-        mouseCursor.style.top = e.pageY + "px";
-        mouseCursor.style.left = e.pageX + "px";
+        elements.mouseCursor.style.top = e.pageY + "px";
+        elements.mouseCursor.style.left = e.pageX + "px";
     }
 
-    navLinks.forEach((link) => {
+    elements.navLinks.forEach((link) => {
         link.addEventListener("mouseover", () => {
-            mouseCursor.classList.add("link-grow--black");
+            elements.mouseCursor.classList.add("link-grow");
             link.classList.add("hovered-link");
         });
+
         link.addEventListener("mouseleave", () => {
-            mouseCursor.classList.remove("link-grow--black");
+            elements.mouseCursor.classList.remove("link-grow");
             link.classList.remove("hovered-link");
         });
     });
 
-    btnsEffect.forEach((link) => {
-        link.addEventListener("mouseover", () => {
-            mouseCursor.classList.add("link-grow--transparent");
-            mouseCursor.classList.remove("--white");
+    elements.buttons.forEach((btn) => {
+        btn.addEventListener("mouseover", () => {
+            if (btn.closest(".black")) {
+                elements.mouseCursor.classList.remove("--white");
+            } else {
+                elements.mouseCursor.classList.add("link-grow--transparent");
+            }
             // link.classList.add("hovered-link");
         });
-        link.addEventListener("mouseleave", () => {
-            mouseCursor.classList.remove("link-grow--transparent");
+        btn.addEventListener("mouseleave", () => {
+            elements.mouseCursor.classList.remove("link-grow--transparent");
+
+            elements.mouseCursor.classList.remove("link-grow");
             // mouseCursor.classList.add("--white");
             // link.classList.remove("hovered-link");
         });
     });
 
-    contactBoxes.forEach((link) => {
+    elements.contactBoxes.forEach((box) => {
+        box.addEventListener("mouseover", () => {
+            elements.mouseCursor.classList.add("transparent-grow");
+        });
+        box.addEventListener("mouseleave", () => {
+            elements.mouseCursor.classList.remove("transparent-grow");
+        });
+    });
+
+    elements.sections.forEach((link) => {
         link.addEventListener("mouseover", () => {
-            mouseCursor.classList.add("link-grow");
-            mouseCursor.classList.remove("--white");
+            elements.mouseCursor.classList.add("--white");
             // link.classList.add("hovered-link");
         });
         link.addEventListener("mouseleave", () => {
-            mouseCursor.classList.remove("link-grow");
+            elements.mouseCursor.classList.remove("--white");
             // mouseCursor.classList.add("--white");
             // link.classList.remove("hovered-link");
         });
     });
-
-    // [quotesSection, projectSection].forEach((section) => {
-    //   section.addEventListener("mouseover", () => {
-    //     mouseCursor.classList.add("--white");
-    //   });
-    //   section.addEventListener("mouseleave", () => {
-    //     mouseCursor.classList.remove("--white");
-    //   });
-    // });
-
-    // buttons.forEach((button) => {
-    //   button.addEventListener("mouseover", () => {
-    //     mouseCursor.classList.add("link-grow");
-    //     mouseCursor.classList.add("--white");
-    //   });
-    //   button.addEventListener("mouseleave", () => {
-    //     mouseCursor.classList.remove("link-grow");
-    //     mouseCursor.classList.remove("--white");
-    //   });
-    // });
 });

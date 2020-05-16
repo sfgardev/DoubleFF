@@ -1,124 +1,120 @@
 body {
-  font-family: "CenturyGothic", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 19px;
-  color: $color-text;
+    font-family: "CenturyGothic", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-text;
 
-  &.lock {
-    overflow: hidden;
-  }
+    &.lock {
+        overflow: hidden;
+    }
 }
 
 .heading-primary {
-  font-family: "CenturyGothic", sans-serif;
-  font-size: 48px;
-  line-height: 65px;
-  color: #000;
-  display: inline-block;
+    font-family: "CenturyGothic", sans-serif;
+    font-size: 48px;
+    line-height: 65px;
+    color: #000;
+    display: inline-block;
 }
 
 .typed-cursor {
-  font-size: 48px;
+    font-size: 48px;
 }
 @media (max-width: 609px) {
-  .typed-cursor {
-    font-size: 24px;
-  }
+    .typed-cursor {
+        font-size: 24px;
+    }
 }
 
 .cursor {
-  width: 3rem;
-  height: 3rem;
-  border: 2px solid #000;
-  border-radius: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: all 0.3s ease;
-  transition-property: background, border-color, transform;
-  transform-origin: 100% 100%;
-  z-index: 1;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transition-property: background, border-color, transform;
+    transform-origin: 100% 100%;
+    z-index: 1;
 }
 
 @media (max-width: 767px) {
-  .cursor {
-    display: none;
-  }
+    .cursor {
+        display: none;
+    }
 }
 
 .--white {
-  border-color: #fff;
+    border-color: #fff;
 }
 
 .link-grow {
-  transform: scale(2);
+    transform: scale(2);
+    background: #000;
 }
 
-.link-grow--black {
+.transparent-grow {
   transform: scale(2);
-  background: #000;
-}
-
-.link-grow.--transparent {
-  border-color: #000;
   background: transparent;
 }
 
 .hovered-link {
-  color: #fff;
+    color: #fff;
 }
 
 .heading-secondary {
-  font-family: "CenturyGothic", sans-serif;
-  font-size: 32px;
-  line-height: 44px;
-  margin-bottom: 20px;
+    font-family: "CenturyGothic", sans-serif;
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 20px;
 
-  &--white {
-    color: #fff;
-    // margin-bottom: 30px;
-  }
-
-  &--text-align-right {
-    text-align: right;
-  }
-
-  &--underline {
-    padding-bottom: 24px;
-    margin-bottom: 60px;
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 116px;
-      height: 1px;
-      background-color: #000;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
+    &--white {
+        color: #fff;
+        // margin-bottom: 30px;
     }
-  }
 
-  &--color-white {
-    // margin-bottom: 57px;
-
-    &::after {
-      background-color: #fff;
+    &--text-align-right {
+        text-align: right;
     }
-  }
+
+    &--underline {
+        padding-bottom: 24px;
+        margin-bottom: 60px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 116px;
+            height: 1px;
+            background-color: #000;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+
+    &--color-white {
+        // margin-bottom: 57px;
+
+        &::after {
+            background-color: #fff;
+        }
+    }
 }
 
 .paragraph {
-  font-family: "CenturyGothic", sans-serif;
+    font-family: "CenturyGothic", sans-serif;
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
 
-  &--color-white {
-    margin-bottom: 20px;
-  }
+    &--color-white {
+        margin-bottom: 20px;
+    }
 }
