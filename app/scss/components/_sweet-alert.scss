@@ -1,0 +1,24 @@
+.swal2-actions .swal2-styled:focus {
+    outline: none;
+    box-shadow: none;
+}
+.swal2-show .swal2-icon.swal2-success {
+    border-color: #000;
+    color: #000;
+}
+.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long,
+.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip,
+.swal2-modal .swal2-actions .swal2-styled.swal2-confirm,
+.swal2-icon-show .swal2-success-fix,
+.swal2-success-circular-line-left,
+.swal2-success-fix {
+    background-color: #000;
+}
+
+.swal2-icon.swal2-success.swal2-icon-show .swal2-success-ring {
+    border: 0.25em solid #000;
+}
+
+#swal2-title {
+    color: #000;
+}
