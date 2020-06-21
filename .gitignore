@@ -1,6 +1,5 @@
+*.min.*
 node_modules
 dist
-app/css
-app/js/libs.min.js
-app/js/main.min.js
+
 package-lock.json
