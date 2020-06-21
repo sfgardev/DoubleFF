@@ -1040,7 +1040,7 @@
                         <input
                             type="hidden"
                             name="project_name"
-                            value="Site Name"
+                            value="DoubleFF"
                         />
                         <input
                             type="hidden"
@@ -1050,7 +1050,7 @@
                         <input
                             type="hidden"
                             name="form_subject"
-                            value="Form Subject"
+                            value="Заявка от клиента"
                         />
                         <!-- END Hidden Required Fields -->
                         <div class="form__inner">
@@ -1074,6 +1074,21 @@
                                 />
                                 <label for="name" class="form__label"></label>
                             </div>
+                        </div>
+                        <div class="form__group">
+                            <select
+                                type="service-category"
+                                class="form__select"
+                                name="service-category"
+                                placeholder="Выберите категорию услуг*"
+                                required
+                            >
+                            <option value="Разработка веб-сайта">Разработка веб-сайта</option>
+                            <option value="Веб-дизайн">Веб-дизайн</option>
+                            <option value="Компьютерная помощь">Компьютерная помощь</option>
+                            <option value="СЕО">СЕО</option>
+                            <option value="Сборка ПК">Сборка ПК</option>
+                            <select/>
                         </div>
                         <textarea
                             class="form__textarea"
