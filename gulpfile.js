@@ -41,7 +41,8 @@ gulp.task('script', function(){
         'node_modules/typed.js/lib/typed.js',
         'node_modules/jquery-parallax.js/parallax.js',
         'node_modules/wow.js/dist/wow.js',
-        'node_modules/sweetalert2/dist/sweetalert2.all.js'
+        'node_modules/sweetalert2/dist/sweetalert2.all.js',
+        'node_modules/jquery.maskedinput/src/jquery.maskedinput.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
@@ -80,7 +81,7 @@ gulp.task('export', async () => {
     gulp.src('app/css/**/*.css')
     .pipe(gulp.dest('dist/css'))
 
-    gulp.src('app/js/**/*.js')
+    gulp.src(['app/js/**/*.js', '!app/js/**/main.js'])
     .pipe(gulp.dest('dist/js'))
 
     gulp.src('app/fonts/**/*.*')

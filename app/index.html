@@ -1066,9 +1066,20 @@
                             </div>
                             <div class="form__group">
                                 <input
+                                    type="tel"
+                                    class="form__input"
+                                    id="phone"
+                                    name="Телефон"
+                                    placeholder="Телефон*"
+                                    required
+                                />
+                                <label for="name" class="form__label"></label>
+                            </div>
+                            <div class="form__group">
+                                <input
                                     type="email"
                                     class="form__input"
-                                    name="Адрес электронной почты"
+                                    name="Email"
                                     placeholder="Email*"
                                     required
                                 />
@@ -1079,10 +1090,11 @@
                             <select
                                 type="service-category"
                                 class="form__select"
-                                name="Категория услуги"
+                                name="Услуга"
                                 placeholder="Выберите категорию услуг*"
                                 required
                             >
+                            <option value="" disabled selected>Выберите категорию услуг</option>
                             <option value="Разработка веб-сайта">Разработка веб-сайта</option>
                             <option value="Веб-дизайн">Веб-дизайн</option>
                             <option value="Компьютерная помощь">Компьютерная помощь</option>

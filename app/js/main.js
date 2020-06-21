@@ -98,8 +98,10 @@ $(function () {
         );
     });
 
-    /* Cursor */
+    /* Phone mask */
+    $('#phone').mask("+7(999)-999-99-99")
 
+    /* Cursor */
     let elements = {
         mouseCursor: document.querySelector(".cursor"),
         navLinks: document.querySelectorAll(".menu__item a"),
