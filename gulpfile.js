@@ -74,20 +74,23 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('export', async () => {
-    let buildHtml = gulp.src('app/**/*.html')
+    gulp.src('app/**/*.html')
     .pipe(gulp.dest('dist'))
 
-    let buildCss = gulp.src('app/css/**/*.css')
+    gulp.src('app/css/**/*.css')
     .pipe(gulp.dest('dist/css'))
 
-    let buildJs = gulp.src('app/js/**/*.js')
+    gulp.src('app/js/**/*.js')
     .pipe(gulp.dest('dist/js'))
 
-    let buildFonts = gulp.src('app/fonts/**/*.*')
+    gulp.src('app/fonts/**/*.*')
     .pipe(gulp.dest('dist/fonts'))
 
-    let buildImg = gulp.src('app/images/**/*.*')
+    gulp.src('app/images/**/*.*')
     .pipe(gulp.dest('dist/images'))
+
+    gulp.src('app/**/*.php')
+    .pipe(gulp.dest('dist'))
 }) 
 
 gulp.task('watch', function(){
