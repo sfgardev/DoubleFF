@@ -101,6 +101,11 @@ $(function () {
     /* Phone mask */
     $('#phone').mask("+7(999)-999-99-99")
 
+    /* Cursor caret on zero position */
+    $("#phone").on("focus click", function() {
+        $(this)[0].setSelectionRange(0,0);
+    })
+
     /* Cursor */
     let elements = {
         mouseCursor: document.querySelector(".cursor"),
