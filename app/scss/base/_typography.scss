@@ -16,6 +16,10 @@ body {
     line-height: 65px;
     color: #000;
     display: inline-block;
+
+    & span {
+        font-family: "Revalia", cursive;
+    }
 }
 
 .typed-cursor {
