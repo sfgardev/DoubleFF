@@ -99,12 +99,12 @@ $(function () {
     });
 
     /* Phone mask */
-    $('#phone').mask("+7(999)-999-99-99")
+    $("#phone").mask("+7(999)-999-99-99");
 
     /* Cursor caret on zero position */
-    $("#phone").on("focus click", function() {
-        $(this)[0].setSelectionRange(0,0);
-    })
+    $("#phone").on("focus click", function () {
+        $(this)[0].setSelectionRange(0, 0);
+    });
 
     /* Cursor */
     let elements = {
@@ -113,6 +113,7 @@ $(function () {
         sections: document.querySelectorAll(".our-projects, .quote"),
         buttons: document.querySelectorAll(".btn"),
         contactBoxes: document.querySelectorAll(".contact-box"),
+        toTopBtn: document.querySelector(".to-top-btn"),
     };
 
     window.addEventListener("mousemove", cursor);
@@ -141,14 +142,10 @@ $(function () {
             } else {
                 elements.mouseCursor.classList.add("link-grow--transparent");
             }
-            // link.classList.add("hovered-link");
         });
         btn.addEventListener("mouseleave", () => {
             elements.mouseCursor.classList.remove("link-grow--transparent");
-
             elements.mouseCursor.classList.remove("link-grow");
-            // mouseCursor.classList.add("--white");
-            // link.classList.remove("hovered-link");
         });
     });
 
@@ -164,12 +161,16 @@ $(function () {
     elements.sections.forEach((link) => {
         link.addEventListener("mouseover", () => {
             elements.mouseCursor.classList.add("--white");
-            // link.classList.add("hovered-link");
         });
         link.addEventListener("mouseleave", () => {
             elements.mouseCursor.classList.remove("--white");
-            // mouseCursor.classList.add("--white");
-            // link.classList.remove("hovered-link");
         });
+    });
+
+    elements.toTopBtn.addEventListener("mouseover", () => {
+        elements.mouseCursor.classList.add("--white");
+    });
+    elements.toTopBtn.addEventListener("mouseleave", () => {
+        elements.mouseCursor.classList.remove("--white");
     });
 });
