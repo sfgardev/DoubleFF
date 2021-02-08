@@ -173,4 +173,10 @@ $(function () {
     elements.toTopBtn.addEventListener("mouseleave", () => {
         elements.mouseCursor.classList.remove("--white");
     });
+
+    /* Footer */
+    const footer_year = document.querySelector('.footer__copyright > span');
+
+    footer_year.innerHTML = new Date().getFullYear();
+
 });
